@@ -6,37 +6,37 @@ Small CLI helpers for the Jules REST API. They read `JULES_API_KEY` from `.env` 
 
 List sources:
 ```
-python /home/USER/jules/jules-helpers/list_sources.py
+python jules-helpers/list_sources.py
 ```
 
 List sessions:
 ```
-python /home/USER/jules/jules-helpers/list_sessions.py
+python jules-helpers/list_sessions.py
 ```
 
 Get a session:
 ```
-python /home/USER/jules/jules-helpers/get_session.py <session_id>
+python jules-helpers/get_session.py <session_id>
 ```
 
 Delete a session:
 ```
-python /home/USER/jules/jules-helpers/delete_session.py <session_id>
+python jules-helpers/delete_session.py <session_id>
 ```
 
 List activities for a session:
 ```
-python /home/USER/jules/jules-helpers/list_activities.py <session_id>
+python jules-helpers/list_activities.py <session_id>
 ```
 
 Get an activity:
 ```
-python /home/USER/jules/jules-helpers/get_activity.py <session_id> <activity_id>
+python jules-helpers/get_activity.py <session_id> <activity_id>
 ```
 
 Create a session:
 ```
-python /home/USER/jules/jules-helpers/create_session.py \
+python jules-helpers/create_session.py \
   --prompt "Fix the build" \
   --source sources/github/OWNER/REPO \
   --starting-branch main \
@@ -46,16 +46,16 @@ python /home/USER/jules/jules-helpers/create_session.py \
 
 Send a message to a session:
 ```
-python /home/USER/jules/jules-helpers/send_message.py <session_id> \
+python jules-helpers/send_message.py <session_id> \
   --message "Please focus on the failing tests only."
 ```
 
 Approve a plan:
 ```
-python /home/USER/jules/jules-helpers/approve_plan.py <session_id>
+python jules-helpers/approve_plan.py <session_id>
 ```
 
 List recurring sessions (approx schedules):
 ```
-python /home/USER/jules/jules-helpers/list_schedules.py --repo OWNER/REPO
+python jules-helpers/list_schedules.py --repo OWNER/REPO
 ```

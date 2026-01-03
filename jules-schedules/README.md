@@ -10,7 +10,7 @@ This helper groups Jules sessions by title+prompt to approximate recurring sched
 ## Run
 
 ```
-python /home/USER/jules/jules-schedules/list_repo_schedules.py
+python jules-schedules/list_repo_schedules.py
 ```
 
 ## Output

@@ -34,31 +34,31 @@ curl -H "x-goog-api-key: $JULES_API_KEY" \
 ### Helper script (preferred for listing schedules)
 Use the repo script at `jules-schedules/list_repo_schedules.py` to list sessions and group recurring prompts:
 ```
-python /home/USER/jules/jules-schedules/list_repo_schedules.py
+python jules-schedules/list_repo_schedules.py
 ```
 Optional override:
 ```
 JULES_REPO=OWNER/REPO \
-python /home/USER/jules/jules-schedules/list_repo_schedules.py
+python jules-schedules/list_repo_schedules.py
 ```
 
 ### Jules helper CLI (preferred for API work)
 Helpers live in `jules-helpers/` and read `JULES_API_KEY` from `.env`.
 ```
-python /home/USER/jules/jules-helpers/list_sources.py
-python /home/USER/jules/jules-helpers/list_sessions.py
-python /home/USER/jules/jules-helpers/get_session.py <session_id>
-python /home/USER/jules/jules-helpers/delete_session.py <session_id>
-python /home/USER/jules/jules-helpers/list_activities.py <session_id>
-python /home/USER/jules/jules-helpers/get_activity.py <session_id> <activity_id>
-python /home/USER/jules/jules-helpers/create_session.py \
+python jules-helpers/list_sources.py
+python jules-helpers/list_sessions.py
+python jules-helpers/get_session.py <session_id>
+python jules-helpers/delete_session.py <session_id>
+python jules-helpers/list_activities.py <session_id>
+python jules-helpers/get_activity.py <session_id> <activity_id>
+python jules-helpers/create_session.py \
   --prompt "Fix the build" \
   --source sources/github/OWNER/REPO \
   --starting-branch main \
   --title "Fix build" \
   --require-plan-approval
-python /home/USER/jules/jules-helpers/send_message.py <session_id> \
+python jules-helpers/send_message.py <session_id> \
   --message "Please focus on the failing tests only."
-python /home/USER/jules/jules-helpers/approve_plan.py <session_id>
-python /home/USER/jules/jules-helpers/list_schedules.py --repo OWNER/REPO
+python jules-helpers/approve_plan.py <session_id>
+python jules-helpers/list_schedules.py --repo OWNER/REPO
 ```
